@@ -1,5 +1,5 @@
 body{
-    padding-left: 10px;
+    
     margin: 0;
 }
 
@@ -49,7 +49,7 @@ body{
     margin-top: 40px;
     width: 80%;
     text-align: center;
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   justify-content: space-evenly;
 }
@@ -174,4 +174,42 @@ body{
     padding:10px;
     margin-left: 30%;
     margin-top: 25px;
+}
+/* ######################################### Student Registration############################## */
+.studentLogin{
+    display: flex;
+    flex-direction:row;
+    
+}
+.studentInfo{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: right;
+}
+.studentInfo input{
+    height: 40px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    background-color: #EFF0F2;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+.studentInfo label{
+    text-align: center;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29.49px;
+}
+.submit{
+    height: 45px;
+    color: #000;
+    background-color: #007074;
+    font-size: 20px;
+    font-weight: 700;
+    width: 20%;
+    margin:auto;
+    margin-top: 50px;
 }

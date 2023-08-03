@@ -10,6 +10,7 @@ import College from "./components/collegeRegistration";
 import Fest from "./components/festRegistration";
 import CompanyLogin from "./components/companyLogin";
 import CompanyRegistration from "./components/companyRegistration";
+import StudentRegistration from "./components/studentRegistration";
 function App(){
   return (
      <>
@@ -20,7 +21,7 @@ function App(){
    <Routes>
         <Route path="/" element={<SLogin />} />
     
-        <Route path="/CollegeLogIn" element={<College />}>
+        <Route path="/CollegeRegistration" element={<College />}>
 
         </Route>
         <Route path="/festRegistration" element={<Fest/>}>
@@ -28,6 +29,8 @@ function App(){
         <Route path="/CompanyLogin" element={<CompanyLogin />}>
         </Route>
         <Route path="/CompanyRegistration" element={<CompanyRegistration />}>
+        </Route>
+        <Route path="/StudentRegistration" element={<StudentRegistration />}>
         </Route>
    </Routes>
   </div>

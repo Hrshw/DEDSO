@@ -6,7 +6,7 @@ function festRegistration(){
 <img style={{"height":"170vh"}} src={require("../images/fest.png")} alt="" />
     </div>
     
-    <form className="festInfo" action="/" method="post">
+    <form className="festInfo" action="/festRegistration" method="post">
         <h1 className="loginText" style={{"fontSize":"55px","width":"80%","textAlign":"center","marginLeft":"10%"}}>Complete Your Registration Fest Details</h1>
     <label htmlFor="">Fest Name</label>
     <input className="textbox-2" name="Fest Name" type="text" placeholder="Enter name of your Fest"/>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 function College() {
     const [formData, setFormData] = useState({
         collegeName: "",
@@ -60,7 +60,7 @@ function College() {
             <img src={require("../images/login.png")} alt="" />
         </div>
 
-        <form className="collegeInfo" onSubmit={handleSubmit} method="post">
+        <form className="collegeInfo" onSubmit={handleSubmit} method="post" action="/CollegeRegistration">
             <h1 className="loginText" style={{ "fontSize": "45px", "width": "80%", "textAlign": "center", "marginLeft": "10%" }}>Complete Your Registration College Details</h1>
             {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
             {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
@@ -85,7 +85,9 @@ function College() {
             <label htmlFor="">Club/Department/Team Name</label>
             <input className="textbox-2" name="clubName" type="text" placeholder="Club/Department/Team Name" value={formData.clubName}
                 onChange={handleChange} />
-            <button className="submit" type="submit">SUBMIT</button>
+            <button className="submit" type="submit">
+                <Link to="/festRegistration" style={{"color":"#fff","textDecoration":"none"}}>SUBMIT</Link>
+                </button>
         </form>
 
 

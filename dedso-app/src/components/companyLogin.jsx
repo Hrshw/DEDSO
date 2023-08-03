@@ -6,7 +6,7 @@ function CompanyLogin(){
 <img src={require("../images/building.png")} alt="" />
         </div>
         
-        <form className="studentInfo" action="/" method="post">
+        <form className="studentInfo" action="/CompanyRegistration" method="post">
             <h1 className="loginText">Welcome to DEDSO Company Login</h1>
         <label htmlFor="">Full Name</label>
         <input className="textbox" name="Full Name" type="text" placeholder="John Doe"/>

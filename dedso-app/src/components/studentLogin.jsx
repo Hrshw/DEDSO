@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
-
+import { Link } from "react-router-dom";
 function SLogin() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -21,10 +20,10 @@ function SLogin() {
     e.preventDefault();
 
     // Form validation
-    if (!formData.fullName || !formData.college || !formData.email || !formData.password) {
-      alert("Please fill in all the required fields.");
-      return;
-    }
+    // if (!formData.fullName || !formData.college || !formData.email || !formData.password) {
+    //   alert("Please fill in all the required fields.");
+    //   return;
+    // }
 
     // Make the POST request to the backend API
     axios
@@ -96,16 +95,17 @@ function SLogin() {
           onChange={handleChange}
         />
         <div className="buttonDiv">
-          <div>
+          <div style={{"display":"flex","flexDirection":"row","justifyContent":"space-between","marginBottom":"20px"}}>
+            <button className="createBtn" style={{"marginRight":"15px"}}>
+              <Link to="/CollegeRegistration">Log In</Link>
+              </button>
             <button className="createBtn" type="submit">
-              Create Account
+              <Link to="/studentRegistration"></Link>Create Account
             </button>
-            <p>
-              Already have an account?<a href="">Log in</a>
-            </p>
+            
           </div>
-          <h1>OR</h1>
-          <button className="googleBtn">
+        
+          <button className="googleBtn" >
             <img className="icon" src={require("../images/google.jpeg")} alt="" />
             Sign up with Google
           </button>
