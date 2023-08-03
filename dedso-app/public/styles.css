@@ -1,0 +1,177 @@
+body{
+    padding-left: 10px;
+    margin: 0;
+}
+
+.studentLogin{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    
+}
+.loginText{
+    font-size: 72px;
+    font-weight: 600;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    list-style: none;
+}
+.studentInfo{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+}
+.studentInfo input{
+    height: 60px;
+    border-radius: 15px;
+    padding: 4px;
+    width: 80%;
+    background-color:#EFF0F2;
+    color: #838383;
+    font-size: 20px;
+    padding-left: 15px;
+    margin-bottom:20px ;
+}
+.studentInfo label{
+    font-size: 30px;
+    font-weight: 500;
+    color: #4D5959;
+}
+.imgDiv{
+    width: 50%;
+}
+.imgDiv img{
+    width: 80%;
+    height: 100%;
+}
+.buttonDiv{
+    margin-top: 40px;
+    width: 80%;
+    text-align: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+}
+.buttonDiv p{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    margin-top: 8px;
+    color: #007074;
+}
+.buttonDiv a{
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+.createBtn{
+    background-color: #007074;
+    color: #fff;
+    height: 60px;
+    width: 300px;
+    margin-bottom: 1px;
+    padding: 5px;
+    font-size: 26px;
+    line-height: 39px;
+    border:none;
+    border-radius: 15px;
+}
+.googleBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #000;
+    height: 60px;
+    text-align: center;
+    border-radius: 15px;
+}
+.icon{
+    height: 30px;
+    width: 30px;
+    margin-right:10px ;
+}
+/* ########################################### COllege Registration APP################################ */
+
+.collegeLogin{
+    display: flex;
+    flex-direction:row;
+    
+}
+.collegeInfo{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: right;
+}
+.collegeInfo input{
+    height: 40px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    background-color: #EFF0F2;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+.collegeInfo label{
+    text-align: center;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29.49px;
+}
+.submit{
+    height: 45px;
+    color: #000;
+    background-color: #007074;
+    font-size: 20px;
+    font-weight: 700;
+    width: 20%;
+    margin:auto;
+    margin-top: 50px;
+}
+
+/* #################################################   FEST LOGIN ########################################## */
+
+.festLogin{
+    display: flex;
+    flex-direction: row;
+}
+.festInfo{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    
+    /* margin-left: 10%; */
+}
+.festInfo input{
+    height: 50px;
+    border-radius: 15px;
+    padding: 4px;
+    width: 80%;
+    background-color:#EFF0F2;
+    color: #838383;
+    font-size: 20px;
+    padding-left: 15px;
+    margin-bottom:20px ;
+    text-align: center;
+}
+.festInfo label{
+    font-size: 30px;
+    font-weight: 500;
+    color: #4D5959;
+}
+.submit-2{
+
+    color: #000;
+    background-color: #007074;
+    font-size: 20px;
+    font-weight: 700;
+    width: 30%;
+    padding:10px;
+    margin-left: 30%;
+    margin-top: 25px;
+}
