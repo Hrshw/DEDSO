@@ -23,7 +23,10 @@ function studentRegistration(){
         <label htmlFor="">Alternate Mobile No.</label>
         <input className="textbox-2" name="altMobile" type="tel" placeholder="contact info" />
         <label htmlFor="">Club/Department/Team Name</label>
+       
         <input className="textbox-2" name="clubName" type="text" placeholder="Club/Department/Team Name" />
+        <label htmlFor="">Password</label>
+        <input name="password" type="password" placeholder="password" />
         <button className="submit" type="submit">
             <Link to="/CollegeRegistration" style={{"color":"#fff","textDecoration":"none"}}>SUBMIT</Link>
             </button>
