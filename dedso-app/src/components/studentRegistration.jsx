@@ -7,7 +7,7 @@ function studentRegistration(){
         <img src={require("../images/login.png")} alt="" />
     </div>
 
-    <form className="studentInfo"  method="post" action="/studentRegistration">
+    <form className="studentInfo"  method="post" action="/StudentRegistration">
         <h1 className="loginText" style={{ "fontSize": "45px", "width": "80%", "textAlign": "center", "marginLeft": "10%" }}>Complete Your Registration Student Details</h1>
        
         <label htmlFor="">Student Name</label>

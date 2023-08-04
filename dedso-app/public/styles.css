@@ -1,7 +1,17 @@
-body{
-    
+
+html {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  body {
+    width: 100%;
     margin: 0;
-}
+    font-family: sans-serif;
+    height: 100vh;
+    
+  }
 
 .studentLogin{
     display: flex;
@@ -26,7 +36,7 @@ body{
     height: 60px;
     border-radius: 15px;
     padding: 4px;
-    width: 80%;
+    width: 50%;
     background-color:#EFF0F2;
     color: #838383;
     font-size: 20px;
@@ -42,8 +52,10 @@ body{
     width: 50%;
 }
 .imgDiv img{
-    width: 80%;
-    height: 100%;
+    width: 90%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .buttonDiv{
     margin-top: 40px;
@@ -52,6 +64,7 @@ body{
   flex-direction: column;
   display: flex;
   justify-content: space-evenly;
+  margin-left: 10%;
 }
 .buttonDiv p{
     font-weight: 500;
@@ -112,9 +125,12 @@ body{
     width: 80%;
     margin-left: 10%;
     margin-bottom: 15px;
+    padding: 4px;
     background-color: #EFF0F2;
     border: 1px solid black;
-    padding-left: 10px;
+    padding-left: 15px;
+    font-size: 18px;
+    border-radius: 15px;
 }
 .collegeInfo label{
     text-align: center;

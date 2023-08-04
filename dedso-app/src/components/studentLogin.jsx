@@ -3,8 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 function SLogin() {
   const [formData, setFormData] = useState({
-    fullName: "",
-    college: "",
     email: "",
     password: "",
   });
@@ -33,8 +31,6 @@ function SLogin() {
         setSuccessMessage("Account created successfully!");
         setErrorMessage(""); // Clear any previous error message
         setFormData({
-          fullName: "",
-          college: "",
           email: "",
           password: "",
         });
@@ -58,24 +54,9 @@ function SLogin() {
         <h1 className="loginText">Welcome to DEDSO Student Login</h1>
         {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-        <label htmlFor="fullName">Full Name</label>
-        <input
-          className="textbox"
-          name="fullName"
-          type="text"
-          placeholder="John Doe"
-          value={formData.fullName}
-          onChange={handleChange}
-        />
-        <label htmlFor="college">College</label>
-        <input
-          className="textbox"
-          name="college"
-          type="text"
-          placeholder="Info"
-          value={formData.college}
-          onChange={handleChange}
-        />
+       
+        
+        
         <label htmlFor="email">Email</label>
         <input
           className="textbox"
@@ -87,7 +68,7 @@ function SLogin() {
         />
         <label htmlFor="password">Password</label>
         <input
-          className="textbox"
+       
           name="password"
           type="password"
           placeholder="password"
@@ -100,7 +81,7 @@ function SLogin() {
               <Link to="/CollegeRegistration">Log In</Link>
               </button>
             <button className="createBtn" type="submit">
-              <Link to="/studentRegistration"></Link>Create Account
+              <Link to="/studentRegistration">Create Account</Link>
             </button>
             
           </div>
