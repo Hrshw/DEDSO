@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 function College() {
+   
+    const navigate = useNavigate();
+
+    const [filled,setFilled]=useState(false);
     const [formData, setFormData] = useState({
         collegeName: "",
         fieldOfEducation: "",
@@ -18,16 +23,18 @@ function College() {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+    
+    for(let field in formData){
+        if(formData[field]!==""){
+            setFilled(true);
+        }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         // Form validation
-        if (!formData.collegeName || !formData.fieldOfEducation || !formData.collegeAddress || !formData.collegeEmail || !formData.pocMobile || !formData.clubName) {
-            alert("Please fill in all the required fields.");
-            return;
-        }
-
+        
         // Make the POST request to the backend API
         axios
             .post("http://localhost:5000/api/college/register", formData)
@@ -85,8 +92,14 @@ function College() {
             <label htmlFor="">Club/Department/Team Name</label>
             <input className="textbox-2" name="clubName" type="text" placeholder="Club/Department/Team Name" value={formData.clubName}
                 onChange={handleChange} />
-            <button className="submit" type="submit">
-                <Link to="/festRegistration" style={{"color":"#fff","textDecoration":"none"}}>SUBMIT</Link>
+            <button className="submit" type="submit" onClick={()=>{
+              if(filled){
+                navigate("/festRegistration")
+              }else{
+                alert("Pls fill the required fields")
+              }
+            }}>
+                SUBMIT
                 </button>
         </form>
 
