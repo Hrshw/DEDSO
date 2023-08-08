@@ -78,7 +78,7 @@ function SLogin() {
               Log In
             </button>
             <button className="createBtn">
-              <Link to="/studentRegistration">Create Account</Link>
+              Create Account
             </button>
           </div>
           <button className="googleBtn">

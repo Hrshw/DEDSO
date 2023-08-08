@@ -18,7 +18,7 @@ function CompanyLogin(){
         <input className="textbox" name="Password" type="password" placeholder="password"/>
         <div className="buttonDiv">
             <div>
-            <button className="createBtn"><Link to="/CompanyRegistration"></Link>Register</button>
+            <button className="createBtn">Register</button>
             <button>Log In</button>
             </div>
             <h1>OR</h1>

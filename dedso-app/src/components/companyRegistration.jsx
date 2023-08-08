@@ -22,7 +22,7 @@ function College(){
     <input className="textbox-2" name="AltMobile" type="tel" placeholder="contact info"/>
     <label htmlFor="">Company LinkedIn</label>
     <input className="textbox-2" name="companyLinkedIn" type="text" placeholder="Company LinkedIn"/>
-    <button className="submit"><Link to="/festRegistration"></Link>SUBMIT</button>
+    <button className="submit">SUBMIT</button>
 </form>
     
     

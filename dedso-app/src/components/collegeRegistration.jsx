@@ -3,8 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 function College() {
-   
-    const navigate = useNavigate();
+
 
     const [filled,setFilled]=useState(false);
     const [formData, setFormData] = useState({
@@ -24,11 +23,7 @@ function College() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
     
-    for(let field in formData){
-        if(formData[field]!==""){
-            setFilled(true);
-        }
-    }
+   
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -92,13 +87,7 @@ function College() {
             <label htmlFor="">Club/Department/Team Name</label>
             <input className="textbox-2" name="clubName" type="text" placeholder="Club/Department/Team Name" value={formData.clubName}
                 onChange={handleChange} />
-            <button className="submit" type="submit" onClick={()=>{
-              if(filled){
-                navigate("/festRegistration")
-              }else{
-                alert("Pls fill the required fields")
-              }
-            }}>
+            <button className="submit" type="submit" >
                 SUBMIT
                 </button>
         </form>
