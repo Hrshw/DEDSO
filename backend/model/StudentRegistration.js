@@ -1,19 +1,33 @@
 const mongoose = require('mongoose');
 
-
 const studentSchema = new mongoose.Schema({
-  fullName: {
+  studentName: {
     type: String,
     required: true
   },
-  college: {
+  degree: {
     type: String,
     required: true
   },
-  email: {
+  yearofStudy: {
+    type: String,
+    required: true
+  },
+  collegeEmail: {
     type: String,
     required: true,
     unique: true
+  },
+  mobile: {
+    type: String,
+    required: true
+  },
+  altMobile: {
+    type: String
+  },
+  clubName: {
+    type: String,
+    required: true
   },
   password: {
     type: String,
