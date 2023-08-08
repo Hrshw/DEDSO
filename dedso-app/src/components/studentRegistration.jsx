@@ -16,8 +16,8 @@ function studentRegistration(){
         <input className="textbox-2" name="degree" type="text" placeholder="Info"/>
         <label htmlFor="">Year of Study</label>
         <input className="textbox-2" name="yearofStudy" type="text" placeholder="info" />
-        <label htmlFor="">College Email</label>
-        <input className="textbox-2" name="collegeEmail" type="email" placeholder="College Email"  />
+        <label htmlFor="">Student Email</label>
+        <input className="textbox-2" name="studentEmail" type="email" placeholder="Student Email"  />
         <label htmlFor="">Mobile No.</label>
         <input className="textbox-2" name="mobile" type="tel" placeholder="Contact info"  />
         <label htmlFor="">Alternate Mobile No.</label>
