@@ -7,7 +7,7 @@ const port = 5000;
 
 // Database related code
 require('./Db_connection/Db_conn');
-const Student = require('./model/StudentLogin');
+const Student = require('./model/StudentRegistration');
 const College = require('./model/collegeRegistration');
 const Company = require('./model/CompanyRegistration')
 
@@ -17,7 +17,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors()); // Enable CORS for all routes
 
-// API route to handle student login form submission
+
+// API route to handle student registration form submission
 app.post('/api/student/register', async (req, res) => {
   const formData = req.body;
 
@@ -36,7 +37,7 @@ app.post('/api/student/register', async (req, res) => {
     const savedStudent = await newStudent.save();
     res.status(201).json(savedStudent); // Return the saved student record as the response
   } catch (error) {
-    console.error('Error saving student record:', error);
+    // console.error('Error saving student record:', error);
     if (error.code === 11000 && error.keyPattern && error.keyPattern.email === 1) {
       res.status(400).json({ error: 'Duplicate email. Please use a different email.' });
     } else {
@@ -44,6 +45,33 @@ app.post('/api/student/register', async (req, res) => {
     }
   }
 });
+
+// API route to handle student login
+app.post("/api/student/login", async (req, res) => {
+  const { collegeEmail, password } = req.body;
+
+  try {
+    // Check if student with the provided email exists
+    const student = await Student.findOne({ collegeEmail });
+    if (!student) {
+      return res.status(401).json({ error: "Invalid email or password." });
+    }
+
+    // Compare passwords
+    const isPasswordValid = await bcrypt.compare(password, student.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ error: "Invalid email or password." });
+    }
+
+    // Successful login
+    res.status(200).json({ message: "Login successful." });
+
+  } catch (error) {
+    console.error("Error during student login:", error);
+    res.status(500).json({ error: "An error occurred while processing your request." });
+  }
+});
+
 
 // API route to handle college registration form submission
 app.post("/api/college/register", async (req, res) => {
@@ -99,6 +127,17 @@ app.post("/api/company/login", async (req, res) => {
   } catch (error) {
     console.error("Error during company login:", error);
     res.status(500).json({ error: "An error occurred while processing your request." });
+  }
+});
+
+// API route to get all student records
+app.get('/api/students', async (req, res) => {
+  try {
+    const students = await Student.find();
+    res.json(students);
+  } catch (error) {
+    console.error('Error fetching student records:', error);
+    res.status(500).json({ error: 'An error occurred while fetching student records.' });
   }
 });
 
