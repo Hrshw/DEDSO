@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function SLogin() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
+const navigate= useNavigate();
 
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -22,7 +25,6 @@ function SLogin() {
     //   alert("Please fill in all the required fields.");
     //   return;
     // }
-
     // Make the POST request to the backend API
     axios
       .post("http://localhost:5000/api/student/register", formData)
@@ -68,7 +70,6 @@ function SLogin() {
         />
         <label htmlFor="password">Password</label>
         <input
-       
           name="password"
           type="password"
           placeholder="password"
@@ -77,8 +78,14 @@ function SLogin() {
         />
         <div className="buttonDiv">
           <div style={{"display":"flex","flexDirection":"row","justifyContent":"space-between","marginBottom":"20px"}}>
-            <button className="createBtn" style={{"marginRight":"15px"}}>
-              <Link to="/CollegeRegistration">Log In</Link>
+            <button className="createBtn" style={{"marginRight":"15px"}} onClick={()=>{
+               if(formData.email==="" || formData.password===""){
+                alert("Pls fill the form");
+               }else{
+                navigate("/CollegeRegistration")
+               }
+            }}>
+             Log In
               </button>
             <button className="createBtn" type="submit">
               <Link to="/studentRegistration">Create Account</Link>
