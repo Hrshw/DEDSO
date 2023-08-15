@@ -19,7 +19,7 @@ function CompanyLogin(){
         <div className="buttonDiv">
             <div>
             <button className="createBtn">Register</button>
-            <button>Log In</button>
+            <button className="createBtn">Log In</button>
             </div>
             <h1>OR</h1>
             <button className="googleBtn"><img className="icon" src={require("../images/google.jpeg")} alt="" />Sign up with Google</button>
