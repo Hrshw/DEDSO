@@ -129,7 +129,28 @@ libero justo laoreet sit amet vitae.</p>
                 <h1>COMPANY LOGIN</h1>
                 <img src={require("../images/whiteArrow.png")}alt="" />
                 </div>
-                 
+                 <div className="logoDiv">
+                      <img src={require("../images/unreal.png")} alt="" />
+                      <img src={require("../images/unity.png")} alt="" />
+                      <img src={require("../images/oculus.png")} alt="" />
+                      <img src={require("../images/vive.png")} alt="" />
+                 </div>
+             </div>
+             <div className="howToDiv">
+                <div style={{"display":"flex","flexDirection":"row","justifyContent":"space-between","alignItems":"center"}}>
+                <div>
+                    <h1 style={{"fontWeight":"700","fontSize":"40px"}}>HOW WE WORK</h1>
+                    <div style={{"display":"flex","flexDirection":"row","alignItems":"center"}}>
+                        <h1 style={{"fontWeight":"200","fontSize":"40px","marginRight":"50px"}} >AT DEDSO?</h1>
+                        <img src={require("../images/arrow-small-right.png")} alt="" />
+                    </div>
+                </div>
+                <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat 
+nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo 
+quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare 
+lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
+                </div>
+                <div></div>
              </div>
         </div>
     )
