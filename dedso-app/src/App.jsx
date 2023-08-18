@@ -5,6 +5,7 @@ import {
   Route,
   
 } from "react-router-dom";
+import HomePage from "./components/Homepage";
 import SLogin from "./components/studentLogin";
 import College from "./components/collegeRegistration";
 import Fest from "./components/festRegistration";
@@ -19,7 +20,7 @@ function App(){
 
   
    <Routes>
-        <Route path="/" element={<SLogin />} />
+        <Route path="/" element={<HomePage />} />
     
         <Route path="/CollegeRegistration" element={<College />}>
 

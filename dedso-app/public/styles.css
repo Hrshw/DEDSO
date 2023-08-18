@@ -3,6 +3,7 @@ html {
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: hidden;
   }
   
   body {
@@ -10,8 +11,240 @@ html {
     margin: 0;
     font-family: sans-serif;
     height: 100vh;
+    overflow:auto;
     
   }
+/* ################################ HOMEPAGE ####################### */
+.homePage{
+    background-color: #302C42;
+    /* background-image: linear-gradient(#302C42,red); */
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    padding-top: 30px;
+    margin: 0;
+}
+.navLeft,.navRight{
+    width: 30%;
+}
+.navLeft img{
+    height: 120px;
+    width: 120px;
+}
+.navMid{
+    width: 40%;
+}
+.navLeft, .navMid , .navRight{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+}
+.navRight a{
+    padding: 20px;
+   border: 2px solid #fff;
+   border-radius: 40px;
+   
+   color: #fff;
+   text-decoration: none;
+}
+.navMid a{
+  text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+
+}
+.loginButton{
+    color: #302C42;
+    background-image: linear-gradient(#8176AF,#C0B7E8);
+}
+
+.textArea{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 150px 7% 0px;
+    padding-bottom: 100px;
+}
+.textArea div{
+    display: flex;
+    flex-direction: column;
+}
+.textArea div h1{
+    width: 75%;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 75px;
+    color: #fff;
+}
+.arrow{
+    color: #fff;
+    height: 100px;
+    width: 100px;
+    margin-left: 60px;
+}
+.textArea div p{
+    width: 45%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+}
+.sponsBtn{
+    text-align: center;
+    width: 15%;
+    color: #302C42;
+    border-radius: 40px;
+    padding: 15px;
+    text-decoration: none;
+
+    background-image: linear-gradient(#8176AF,#C0B7E8);
+}
+/* ###################INTRO SECTION  */
+#introDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 7%;
+}
+
+#introDiv div h1{
+   font-weight: 800;
+   font-size: 36px;
+    color: #fff;
+    line-height: 3px;
+}
+#introDiv div{
+    width: 50%;
+}
+#introDiv p{
+    width: 50%;
+    color: #fff;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 200; 
+}
+/* ##################  ABOUT US SECTION ##################### */
+#aboutUs{
+    margin:100px 7%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#aboutUs h1{
+    color: #fff;
+    margin: 5px;
+}
+#aboutUs p{
+   color: #fff;
+   line-height: 25px;
+   font-size: 20px;
+   font-weight: 300;
+}
+#aboutUs div{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-left: 18%;
+}
+#cardSection{
+    display: flex;
+    flex-direction: column;
+    margin: 0 7%;
+}
+#cardDiv{
+    margin:100px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+#cardDiv div{
+    margin-right: 18%;
+
+}
+#cardDiv h1{
+    margin: 0;
+    color: #fff;
+}
+#cardDiv p{
+    color: #fff;
+   line-height: 25px;
+   font-size: 20px;
+   font-weight: 300;
+}
+.cards{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+.cards div{
+    width: 20%;
+    background: #8176AF;
+    background-image: url("../src/images/cardback.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15px 15px 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+.cards img{
+    border-radius: 100%;
+    border: 10px solid #000;
+    margin-bottom: 15px;
+}
+.cards div h2{
+    
+    color: #fff;
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0 0 20px;
+    text-align: center;
+    font-weight: 700;
+}
+.cards div p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0 10px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom:30px;
+}
+.cards div a{
+    color: #fff;
+}
+#companyLogin{
+    margin: 40px 0;
+}
+
+#companyLogin h1{
+   margin-right:40px ;
+    font-size: 85px ;
+    line-height: 90px;
+    font-weight: 700;
+    color:#ffF ;
+}
+.companyBtn{
+    justify-content:  center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    text-align: center;
+    margin: 100px 7%;
+    background-color: #c79e0c;
+    border-radius: 160px;
+}
+
+/* ################################ HOMEPAGE ####################### */
 
 .studentLogin{
     display: flex;
