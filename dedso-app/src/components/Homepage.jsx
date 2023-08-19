@@ -1,5 +1,5 @@
 import React from "react";
-
+import StudentLogin from "./studentLogin"
 function HomePage(){
     return (
         <div className="homePage">
@@ -150,8 +150,71 @@ nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
 quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare 
 lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
                 </div>
-                <div></div>
+                </div>
+                <div className="stepDiv">
+                    
+                    {/* <div>
+                    <h1>01</h1>
+                    <h1>02</h1>
+                    <h1>03</h1>
+                    <h1>04</h1>
+                    </div>
+                    <div style={{"marginLeft":"2%"}}>
+                        <h2>Creating Profile</h2>
+                        <h2>Adding Fests</h2>
+                        <h2>Companies Approach You</h2>
+                        <h2>Deals Are Finalized</h2>
+                    </div> */}
+                    <div>
+                        <h1>01</h1>
+                        <h2>Creating Profile</h2>
+                    </div>
+                    <div>
+                        <h1>02</h1>
+                        <h2>Adding Fests</h2>
+                    </div>
+                    <div>
+                    <h1>03</h1>
+                    <h2>Companies Approach You</h2>
+                    </div>
+                    <div>
+                    <h1>04</h1>
+                    <h2>Deals Are Finalised</h2>
+                    </div>
+                </div>
+                <StudentLogin/>
+             <div className="footer"> 
+             <img className="logoImg"src={require("../images/Frame.png")} alt="" />
+             <img src={require("../images/straightLine.png")} alt="" />
+             <ul>
+                <a href="">ABOUT</a>
+                <a href="">SERVICES</a>
+                <a href="">TECHNOLOGIES</a>
+                <a href="">HOW TO</a>
+                <a href="">JOIN DEDSO</a>
+             </ul>
+             <img src={require("../images/straightLine.png")} alt="" />
+             <ul>
+                <a href="">F.A.Q</a>
+                <a href="">SITEMAP</a>
+                <a href="">CONDITIONS</a>
+                <a href="">LICENSES</a>
+             </ul>
+             <img src={require("../images/straightLine.png")} alt="" />
+             <div className="socialDiv" style={{"display":"flex","flexDirection":"column"}}>
+                <h1>SOCIALIZE WITH DEDSO</h1>
+                <div style={{"display":"flex","flexDirection":"row","justifyContent":"space-evenly","marginTop":"20px"}}>
+                    <img src={require("../images/facebook.png")} alt="" />
+                    <img src={require("../images/twitter.png")} alt="" />
+                    <img src={require("../images/linkedin.png")} alt="" />
+                    <img src={require("../images/youtube.png")} alt="" />
+                    <img src={require("../images/instagram.png")} alt="" />
+                    <img src={require("../images/pinterest.png")} alt="" />
+                </div>
+                <a style={{"width":"90%","marginTop":"40px","color":"#302C42","padding":"10px"}} className="sponsBtn" href="">Upgrade Your Fest</a>
              </div>
+             </div>
+             <img style={{"height":"20px","backgroundBlendMode":"color"}} src={require("../images/horizontalLine.png")} alt="" />
         </div>
     )
 }

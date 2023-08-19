@@ -271,14 +271,70 @@ html {
     font-size: 20px;
     line-height: 25px;
 }
+.stepDiv{
+    margin: 100px 0;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+}
+.stepDiv div{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.stepDiv h1{
+    padding: 40px;
+    border-radius: 100%;
+    background-image: linear-gradient(#8176AF,#C0B7E8);
+    color: #302C42;
+    font-size:75px ;
+    font-weight: 700;
+}
+.stepDiv h2{
+    color: #fff;
+    padding-left: 30px;
+    font-weight: 200 ;
+}
 
+.footer{
+    padding: 100px 0;
+    margin: 0 7% ; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #fff;
+}
+.footer ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.logoImg{
+    height: 180px;
+    width: 180px;
+}
+.footer a{
+    color: #fff;
+    font-size:20px;
+    font-weight: 500;
+    line-height: 50px;
+    text-decoration: none;
+}
+.socialDiv h1{
+    font-size: 20px;
+    font-weight: 700;
+}
 /* ################################ HOMEPAGE ####################### */
 
 .studentLogin{
     display: flex;
     flex-direction:row;
     justify-content: flex-start;
+    background-color: #fff;
     
+
 }
 .loginText{
     font-size: 72px;
@@ -313,8 +369,8 @@ html {
     width: 50%;
 }
 .imgDiv img{
-    width: 90%;
-    height: 100vh;
+    width: 70%;
+    height: 80vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
